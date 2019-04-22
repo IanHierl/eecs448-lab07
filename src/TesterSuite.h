@@ -1,8 +1,9 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include "LinkedListOfInts.h"
 
-extern class TesterSuite {
+class TesterSuite {
 private:
   int testCount;
 public:
