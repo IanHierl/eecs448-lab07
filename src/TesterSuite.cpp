@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include <vector>
 #include "LinkedListOfInts.h"
 #include "TesterSuite.h"
@@ -19,15 +20,15 @@ void TesterSuite::runTests() {
 void TesterSuite::testAddFront() {
   std::vector<int> baseLine;
   LinkedListOfInts testList;
-  baseLine = [0,1,2,3,4,5,6,7,8,9,10];
+  baseLine = {0,1,2,3,4,5,6,7,8,9,10};
   for( int i = 0; i < 11; i++ ) {
     std::cout << "Added to list: " << baseLine[i] << "\n";
     testList.addFront( baseLine[i] );
   }
-
+  
   std::vector<int> toCheck;
   toCheck = testList.toVector();
-  toCheck = std::reverse( toCheck.begin(), toCheck.end() );
+  std::reverse( toCheck.begin(), toCheck.end() );
   for( int i = 0; i < 11; i++ ) {
     if( toCheck[i] != baseLine[i] ) {
       std::cout << "Failed\n";
