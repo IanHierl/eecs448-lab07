@@ -22,13 +22,13 @@ void TesterSuite::testAddFront() {
   LinkedListOfInts testList;
   for( int i = 0; i < 4096; i++ ) {
     testList.addFront( i );
-    baseLine.push_back;
+    baseLine.push_back( i );
   }
 
   std::vector<int> toCheck;
   bool fail;
   toCheck = testList.toVector();
-  toCheck = std::reverse( toCheck.begin(), toCheck.end() );
+  std::reverse( toCheck.begin(), toCheck.end() );
   std::cout << "Test " << testCount++ << ": test order of list on [0..4095] addFront: ";
   fail = false;
   for( int i = 0; i < baseLine.size(); i++ ) {
@@ -41,7 +41,7 @@ void TesterSuite::testAddFront() {
   if( !fail ) {
     std::cout << "Passed\n";
   }
-  delete &testList;
+  delete *testList;
 }
 
 void TesterSuite::testAddBack() {
@@ -67,7 +67,7 @@ void TesterSuite::testAddBack() {
   if( !fail ) {
     std::cout << "Passed\n";
   }
-  delete &testList;
+  delete *testList;
 }
 
 void TesterSuite::testRemoves() {
@@ -98,7 +98,7 @@ void TesterSuite::testRemoves() {
     std::cout << "Failed\n";
   }
 
-  delete &testList;
+  delete *testList;
   testList = new LinkedListOfInts();
 
   testList.addFront( 1 );
@@ -122,7 +122,7 @@ void TesterSuite::testRemoves() {
   } else {
     std::cout << "Failed\n";
   }
-  delete &testList;
+  delete *testList;
 }
 
 /** Tests isEmpty on empty list, singleton list, small and large list
@@ -168,7 +168,7 @@ void TesterSuite::testEmpty() {
   } else {
     std::cout << "Passed\n";
   }
-  delete &testList;
+  delete *testList;
 }
 
 void TesterSuite::testSize() {
@@ -202,7 +202,7 @@ void TesterSuite::testSize() {
   } else {
     std::cout << "Failed\n";
   }
-  delete &testList;
+  delete *testList;
 }
 
 void TesterSuite::testSearch() {
@@ -258,5 +258,5 @@ void TesterSuite::testSearch() {
   } else {
     std::cout << "Failed\n";
   }
-  delete &testList;
+  delete *testList;
 }
