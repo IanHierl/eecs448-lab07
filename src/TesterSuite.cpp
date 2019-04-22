@@ -22,8 +22,7 @@ void TesterSuite::testAddFront() {
   LinkedListOfInts testList;
   for( int i = 0; i < 4096; i++ ) {
     testList.addFront( i );
-    baseLine.push_back( i );
-  }
+    baseLine.push_back  }
 
   std::vector<int> toCheck;
   toCheck = testList.toVector();
@@ -57,7 +56,7 @@ void TesterSuite::testAddBack() {
   std::cout << "Test " << testcount++ << ": test order of list on [0..4095] addBack: "
   bool fail;
   fail = false;
-  for( int i = 0; i < baseLine.size(); i++ ) {
+  for( int i = 0; i < baseLine.size) {
     if( toCheck[i] != baseLine[i] ) {
       fail = true;
       std::cout << "Failed\n";
