@@ -1,0 +1,4 @@
+It seems as if the removeFront and removeBack functions fail because isEmpty always returns true.
+
+addBack seems to add in items in the wrong order, not putting them at the very back of the list.
+This causes the list to have the right size but not the proper order of elements.

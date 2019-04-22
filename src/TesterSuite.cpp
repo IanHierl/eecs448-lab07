@@ -49,7 +49,7 @@ void TesterSuite::testAddBack() {
   std::vector<int> baseLine;
   LinkedListOfInts testList;
   for( int i = 0; i < 4096; i++ ) {
-    testList.addFront( i );
+    testList.addBack( i );
     baseLine.push_back( i );
   }
 
@@ -62,6 +62,7 @@ void TesterSuite::testAddBack() {
     if( toCheck[i] != baseLine[i] ) {
       fail = true;
       std::cout << "Failed\n";
+      std::cout << "Size of list: " << testList.size() << "\n";
       break;
     }
   }

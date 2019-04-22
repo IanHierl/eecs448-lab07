@@ -1,24 +1,30 @@
 Test 0: test order of list on [0..4095] addFront: Passed
 Test 1: test order of list on [0..4095] addBack: Failed
+Test 2: remove front on empty list: Passed
+Test 3: remove back on empty list: Passed
+Test 4: remove front on singleton list [1]: Failed
+Test 5: remove back on singleton list [1]: Failed
+Test 6: remove front on large list: Failed
+Test 7: remove back on large list: Failed
 Begin isEmpty Tests
-Test 2: isEmpty returns true on empty list: Passed
-Test 3: isEmpty returns false on singleton list: Failed
-Test 4: isEmpty returns false on 10 element list: Failed
-Test 5: isEmpty returns false on 1000 element list: Failed
+Test 8: isEmpty returns true on empty list: Passed
+Test 9: isEmpty returns false on singleton list: Failed
+Test 10: isEmpty returns false on 10 element list: Failed
+Test 11: isEmpty returns false on 1000 element list: Failed
 Begin size Tests
-Test 6: new list starts at size 0: Passed
-Test 7: list with 100 elements added to front: Passed
-Test 8: list with 100 elements added to back: Passed
+Test 12: new list starts at size 0: Passed
+Test 13: list with 100 elements added to front: Passed
+Test 14: list with 100 elements added to back: Passed
 Begin search Tests
-Test 9: search on empty list: Passed
-Test 10: search singleton list [1] for 1: Passed
-Test 11: search singleton list [1] for 2: Passed
-Test 12: search list [1..10] for 5: Passed
-Test 13: search list [1..10] for 11: Passed
-Test 14: search in list with multiple 5 entries for 5: Passed
-Test 15: remove front on empty list: Passed
-Test 16: remove back on empty list: Passed
-Test 17: remove front on singleton list [1]: Failed
-Test 18: remove back on singleton list [1]: Failed
-Test 19: remove front on large list: Failed
-Test 20: remove back on large list: Failed
+Test 15: search on empty list: Passed
+Test 16: search singleton list [1] for 1: Passed
+Test 17: search singleton list [1] for 2: Passed
+Test 18: search list [1..10] for 5: Passed
+Test 19: search list [1..10] for 11: Passed
+Test 20: search in list with multiple 5 entries for 5: Passed
+Test 21: remove front on empty list: Passed
+Test 22: remove back on empty list: Passed
+Test 23: remove front on singleton list [1]: Failed
+Test 24: remove back on singleton list [1]: Failed
+Test 25: remove front on large list: Failed
+Test 26: remove back on large list: Failed
