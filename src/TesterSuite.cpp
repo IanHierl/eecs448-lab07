@@ -15,6 +15,7 @@ void TesterSuite::runTests() {
   testEmpty();
   testSize();
   testSearch();
+  testRemoves();
 }
 
 void TesterSuite::testAddFront() {
@@ -70,6 +71,7 @@ void TesterSuite::testAddBack() {
 
 void TesterSuite::testRemoves() {
   LinkedListOfInts testList;
+  LinkedListOfInts testList2;
   std::cout << "Test " << testCount++ << ": remove front on empty list: ";
   if( testList.removeFront() ) {
     std::cout << "Failed\n";
