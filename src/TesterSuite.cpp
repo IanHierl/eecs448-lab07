@@ -96,13 +96,10 @@ void TesterSuite::testRemoves() {
     std::cout << "Failed\n";
   }
 
-  delete testList;
-  testList = new LinkedListOfInts();
-
-  testList.addFront( 1 );
+  testList2.addFront( 1 );
   std::cout << "Test " << testCount++ << ": remove back on singleton list [1]: ";
-  if( testList.removeBack() ) {
-    if( testList.size() == 0 ) {
+  if( testList2.removeBack() ) {
+    if( testList2.size() == 0 ) {
       std::cout << "Passed\n";
     } else {
       std::cout << "Failed\n";
@@ -110,9 +107,29 @@ void TesterSuite::testRemoves() {
   } else {
     std::cout << "Failed\n";
   }
-  std::cout << "Test " << testCount++ << ": remove front on singleton list [1]: ";
+
+  for( int i = 0; i < 4095; i++ ) {
+    testList.addFront( i );
+    testList.addBack( i );
+  }
+
+  std::cout << "Test " << testCount++ << ": remove front on large list: ";
+  int len;
+  len = testList.size();
   if( testList.removeFront() ) {
-    if( testList.size() == 0 ) {
+    if( testList.size() == len - 1 ) {
+      std::cout << "Passed\n";
+    } else {
+      std::cout << "Failed\n";
+    }
+  } else {
+    std::cout << "Failed\n";
+  }
+
+  std::cout << "Test " << testCount++ << ": remove back on large list: ";
+  len = testList2.size();
+  if( testList2.removeBack() ) {
+    if( testList2.size() == len - 1 ) {
       std::cout << "Passed\n";
     } else {
       std::cout << "Failed\n";

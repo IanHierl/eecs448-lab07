@@ -11,6 +11,7 @@ public:
   void runTests();
   void testAddFront();
   void testAddBack();
+  void testRemoves();
   void testEmpty();
   void testSize();
   void testSearch();
