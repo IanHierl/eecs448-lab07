@@ -10,8 +10,7 @@
 
 int main(int argc, char** argv)
 {
-	std::cout << "Running...\nAnd we're done.\nGoodbye.\n";
-
+	TesterSuite myTester;
+	myTester.runTests();
 	return (0);
-
 }
