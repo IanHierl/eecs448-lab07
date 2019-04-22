@@ -12,6 +12,7 @@ TesterSuite::TesterSuite() {
 void TesterSuite::runTests() {
   testAddFront();
   testAddBack();
+  testRemoves();
   testEmpty();
   testSize();
   testSearch();
@@ -139,11 +140,6 @@ void TesterSuite::testRemoves() {
   }
 }
 
-/** Tests isEmpty on empty list, singleton list, small and large list
-*   @pre None
-*   @post prints test results to STIO
-*   @return none
-*/
 void TesterSuite::testEmpty() {
   std::cout << "Begin isEmpty Tests\n";
   LinkedListOfInts testList;
@@ -187,6 +183,7 @@ void TesterSuite::testEmpty() {
 void TesterSuite::testSize() {
   std::cout << "Begin size Tests\n";
   LinkedListOfInts testList;
+  std::vector<int> baseLine;
   std::cout << "Test " << testCount ++ << ": new list starts at size 0: ";
   if( testList.size() == 0 ) {
     std::cout << "Passed\n";
@@ -199,7 +196,8 @@ void TesterSuite::testSize() {
   }
 
   std::cout << "Test " << testCount++ << ": list with 100 elements added to front: ";
-  if( testList.size() == 100 ) {
+  baseLine = testList.toVector();
+  if( testList.size() == baseLine.size() && testList.size() == 100 ) {
     std::cout << "Passed\n";
   } else {
     std::cout << "Failed\n";
@@ -210,7 +208,8 @@ void TesterSuite::testSize() {
   }
 
   std::cout << "Test " << testCount++ << ": list with 100 elements added to back: ";
-  if( testList.size() == 200 ) {
+  baseLine = testList.toVector();
+  if( testList.size() == baseLine.size() && testList.size() == 200 ) {
     std::cout << "Passed\n";
   } else {
     std::cout << "Failed\n";
