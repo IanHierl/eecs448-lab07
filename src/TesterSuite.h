@@ -1,11 +1,8 @@
-#ifndef TESTSUITE_H
-#define TESTSUITE_H
-
 #include <iostream>
 #include <vector>
 #include "LinkedListOfInts.h"
 
-class TesterSuite {
+extern class TesterSuite {
 private:
   int testCount;
 public:
@@ -15,5 +12,3 @@ public:
   void testSize();
   void testSearch();
 };
-
-#endif

@@ -7,6 +7,7 @@
 #include <iostream>
 
 #include "LinkedListOfInts.h"
+#include "TesterSuite.h"
 
 int main(int argc, char** argv)
 {
