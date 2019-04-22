@@ -8,6 +8,8 @@ private:
 public:
   TesterSuite();
   void runTests();
+  void testAddFront();
+  void testAddBack();
   void testEmpty();
   void testSize();
   void testSearch();
