@@ -41,7 +41,6 @@ void TesterSuite::testAddFront() {
   if( !fail ) {
     std::cout << "Passed\n";
   }
-  delete testList;
 }
 
 void TesterSuite::testAddBack() {
@@ -67,7 +66,6 @@ void TesterSuite::testAddBack() {
   if( !fail ) {
     std::cout << "Passed\n";
   }
-  delete testList;
 }
 
 void TesterSuite::testRemoves() {
@@ -122,7 +120,6 @@ void TesterSuite::testRemoves() {
   } else {
     std::cout << "Failed\n";
   }
-  delete testList;
 }
 
 /** Tests isEmpty on empty list, singleton list, small and large list
@@ -168,7 +165,6 @@ void TesterSuite::testEmpty() {
   } else {
     std::cout << "Passed\n";
   }
-  delete testList;
 }
 
 void TesterSuite::testSize() {
@@ -202,7 +198,6 @@ void TesterSuite::testSize() {
   } else {
     std::cout << "Failed\n";
   }
-  delete testList;
 }
 
 void TesterSuite::testSearch() {
@@ -258,5 +253,4 @@ void TesterSuite::testSearch() {
   } else {
     std::cout << "Failed\n";
   }
-  delete testList;
 }
