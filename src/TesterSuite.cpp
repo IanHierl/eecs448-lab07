@@ -41,7 +41,7 @@ void TesterSuite::testAddFront() {
   if( !fail ) {
     std::cout << "Passed\n";
   }
-  delete *testList;
+  delete testList;
 }
 
 void TesterSuite::testAddBack() {
@@ -67,7 +67,7 @@ void TesterSuite::testAddBack() {
   if( !fail ) {
     std::cout << "Passed\n";
   }
-  delete *testList;
+  delete testList;
 }
 
 void TesterSuite::testRemoves() {
@@ -98,7 +98,7 @@ void TesterSuite::testRemoves() {
     std::cout << "Failed\n";
   }
 
-  delete *testList;
+  delete testList;
   testList = new LinkedListOfInts();
 
   testList.addFront( 1 );
@@ -122,7 +122,7 @@ void TesterSuite::testRemoves() {
   } else {
     std::cout << "Failed\n";
   }
-  delete *testList;
+  delete testList;
 }
 
 /** Tests isEmpty on empty list, singleton list, small and large list
@@ -168,7 +168,7 @@ void TesterSuite::testEmpty() {
   } else {
     std::cout << "Passed\n";
   }
-  delete *testList;
+  delete testList;
 }
 
 void TesterSuite::testSize() {
@@ -202,7 +202,7 @@ void TesterSuite::testSize() {
   } else {
     std::cout << "Failed\n";
   }
-  delete *testList;
+  delete testList;
 }
 
 void TesterSuite::testSearch() {
@@ -254,9 +254,9 @@ void TesterSuite::testSearch() {
   testList.addFront( 5 );
   testList.addBack( 5 );
   if( testList.search(5) ) {
-    std::cout << "Passed\n":
+    std::cout << "Passed\n";
   } else {
     std::cout << "Failed\n";
   }
-  delete *testList;
+  delete testList;
 }
